@@ -1,0 +1,132 @@
+.menu {
+    background-color: rgb(26, 62, 102);
+    /* height: 75px; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+    box-shadow: 5px 0 10px rgba(0, 0, 0, .6);
+    position: sticky;
+    top: 0px;
+    padding: 20px 0px 20px 0px;
+
+}
+
+.titulo {
+    /* position: relative; */
+    color: rgb(160, 158, 158);
+    font-size: 30px;
+    padding: 0 60px;
+    font-weight: bold;
+    outline: none;
+    animation: animate 5s linear infinite;
+
+}
+
+@keyframes animate {
+
+    0%,
+    18%,
+    20%,
+    50.1%,
+    60%,
+    35.1%,
+    80%,
+    90.1%,
+    92% {
+        color: rgb(255, 255, 255);
+        text-shadow: none;
+    }
+
+    18.1%,
+    20.1%,
+    30%,
+    50%,
+    60.1%,
+    65%,
+    80.1%,
+    90%,
+    92.1%,
+    100% {
+        color: #fff;
+        text-shadow: 0 0 10px #03bcf4,
+            0 0 20px #03bcf4,
+            0 0 40px #03bcf4,
+            0 0 80px #03bcf4,
+            0 0 160px #03bcf4;
+    }
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    margin-right: 30px;
+    /* Codigo menu*/
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /*puede ser AUTO, VISIBLE, SCROLL O */
+    display: flex;
+}
+
+.menu li {
+    margin: 0 5px;
+    right: 0;
+    /* transition: 0.5s; */
+    float: left;
+}
+
+.menu a,
+.dropbtn {
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+    /* por aqui esta la vaina */
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(26, 62, 102);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 15px;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #9c4848;
+    /* este el el del puntero */
+    border-radius: 15px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.menu ul li:hover {
+    background-color: green;
+    /* border-bottom: 4px solid white; */
+}
+
+.activo {
+    border-bottom: 3px solid white;
+}

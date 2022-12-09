@@ -1,0 +1,9 @@
+table tr:nth-child(even) td {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+table tr:nth-child(odd) td {
+    background-color: rgb(178, 215, 240);
+    color: black;
+}

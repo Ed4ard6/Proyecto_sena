@@ -1,0 +1,126 @@
+/*Inicio mi cuenta*/
+.bienvenido {
+    border-radius: 35px;
+    width: 60%;
+    margin: 20px 20% 20px 20%;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 18px;
+}
+
+.Contenedor_principal {
+    height: auto;
+    width: 1349px;
+    margin: auto;
+}
+
+.img_bienvenidos {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.cuadro_datos {
+    border: solid 2px black;
+    border-radius: 30px 5px 30px 5px;
+    background-color: rgb(159, 205, 248);
+    font-size: 20px;
+    margin-top: 30px;
+    height: 800px;
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
+
+}
+
+.boton_modificar_datos {
+    border: solid rgb(48, 40, 40) 5px;
+    border-radius: 20px;
+    height: 50px;
+    width: 190px;
+    color: white;
+    border: 2px solid white;
+    font-size: 20px;
+    margin-left: 250px;
+    background-color: rgb(214, 68, 68);
+}
+
+.cuadro_datos_label {
+    float: left;
+    margin-left: 180px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cuadro_datos_label_label {
+    margin-left: 5px;
+    text-align: right;
+    margin-right: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.whatsapp {
+    width: 80px;
+    height: 80px;
+    float: right;
+    margin-left: 80%;
+    margin-bottom: 20px;
+    margin-top: 0px;
+    position: relative;
+}
+
+/*Fin mi cuenta*/
+/*Inicio modificar mi cuenta*/
+.titulo_tus_datos {
+    text-align: center;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.boton_concelar_datos {
+    float: left;
+    margin-left: 100px;
+    border: solid rgb(253, 5, 5) 5px;
+    border-radius: 20px;
+    height: 50px;
+    width: 210px;
+    color: white;
+    font-size: 22px;
+    background-color: rgb(223, 104, 104);
+}
+
+.cuadro_datos_modificar_label {
+    margin-left: 120px;
+    text-align: right;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.boton_finalizar_datos {
+    float: right;
+    margin-right: 130px;
+    border: solid rgb(26, 99, 12) 5px;
+    border-radius: 20px;
+    height: 50px;
+    width: 210px;
+    color: white;
+    font-size: 22px;
+    background-color: rgb(99, 212, 96);
+}
+
+.inputs_modificar_tus_datos {
+    float: right;
+    color: rgb(77, 19, 19);
+    font-size: large;
+    background-color: transparent;
+    border-radius: 5px;
+    border: none;
+    border-bottom: solid rgb(22, 15, 15) 2px;
+    margin-left: 10px;
+    margin-right: 110px;
+    width: 300px;
+
+}
+
+/*Fin modificar mi cuenta*/

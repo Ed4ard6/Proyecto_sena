@@ -1,0 +1,51 @@
+.contenedor_recuperar {
+    margin: auto;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    padding: 30px 10px;
+    border: 1px solid #fff;
+    background-color: rgb(4, 63, 117);
+    box-shadow: 10px 10px 14px rgba(0, 0, 0, .5);
+    color: #fff;
+    width: 40%;
+    height: auto;
+}
+
+.contenedor_recuperar h1 {
+    font: oblique bold 185% cursive;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.grupo {
+    width: 90%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.grupo input {
+    border: none;
+    border-bottom: 2px solid #fff;
+    background-color: transparent;
+    font: oblique bold 105% cursive;
+    color: #fff;
+    width: 200px;
+
+}
+
+.contenedor_recuperar label {
+    font: oblique bold 140% cursive;
+}
+
+.boton-recuperar {
+    width: fit-content;
+    margin: auto;
+}
+
+.boton-recuperar input {
+    width: 100px;
+    height: 50px;
+}
