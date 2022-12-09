@@ -61,10 +61,10 @@ include("consulta_database.php");
             ?>
                 <div class="con">
                     <img alt="img_con" class="img_con" src="data:image/jpg;base64,<?php echo  base64_encode($mostrar['imagen']); ?>">
-                    <h1> <?php echo $mostrar['nom_servicio'] ?> <br>
-                        <h5><?php echo $mostrar['descripcion'] ?></h5>
+                    <h1 class="descripcion_servicios"> <?php echo $mostrar['nom_servicio'] ?> <br>
+                        <h5 class="descripcion_servicios"><?php echo $mostrar['descripcion'] ?></h5>
                     </h1>
-                    <p><?php echo $mostrar['precio'] ?></p>
+                    <p class="descripcion_servicios"><?php echo $mostrar['precio'] ?></p>
                 </div>
             <?php
             }

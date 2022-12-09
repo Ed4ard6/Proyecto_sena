@@ -43,7 +43,6 @@ if (!isset($_SESSION['admin'])) {
                 <li><a href="../usuarios/usuarios.php">Usuarios</a></li>
                 <li><a href="../CRUD_Fact/listafacturas.php">Factura</a></li>
                 <li><a href="modificar_servicio.php" >Servicio</a></li>
-                <li><a href="informes.php">Informes</a></li>
                 <li><a target="_blank" href="../manual.pdf">Ayuda</a></li>
                 <li><a href="../cerrar_sesion.php" >Cerrar Sesión</a></li>
             </ul>
@@ -51,9 +50,10 @@ if (!isset($_SESSION['admin'])) {
     <div class="Contenedor_principal">
         <div class="cuerpo_servicios">
             <div class="titulo_servicios" style="margin-bottom: 5px;">
-                <h1>Modificar Tarifas</h1>
+                
                 </div>
                 <div class="titulo_servicios">
+                    <h1>Modificar Tarifas</h1>
                     <h4>(Usa los botones para modificar, crear o eliminar nombre, <br> precio, descripcion e imagen de las tarifas)</h4> 
                     <a href="crear_servi.php"><button class="button button2">CREAR</button></a>
                     <a href="modifi_servi.php"><button class="button button3">MODIFICAR</button></a>

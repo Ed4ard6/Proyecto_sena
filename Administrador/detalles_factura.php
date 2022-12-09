@@ -110,8 +110,7 @@ if (mysqli_num_rows($result) == 1) {
           <h2>Factura #<?php echo $id_factura . " -- "; ?> Clinte: <?php echo $nom_cli . " " . $ape_cli ?> </h2>
         </div>
         <?php
-
-
+        //$sql = "SELECT * FROM factura WHERE id_factura = $id_factura";
         $sql = "SELECT nom_ser, cantidad, precio, total FROM det_factura WHERE id_fact_det = $id_factura;";
         $result = mysqli_query($conn, $sql);
         ?>
@@ -145,7 +144,7 @@ if (mysqli_num_rows($result) == 1) {
                 <td class="td_det_fact" style="text-align: center;"><?php echo $cantidad; ?></td>
                 <td class="td_det_fact"><?php echo $precio; ?></td>
                 <td class="td_det_fact" style="text-align: center;"><?php echo $total; ?></td>
-                <form action="eliminar_servicio_fac.php?nombre_servicio=<?php echo $nombre_servicio; ?>&id_fact=<?php echo $id_factura; ?>" method="post">
+                <form action="eliminar_servicio_fac.php?id_ser=<?php echo $id_servicio; ?>" method="post">
                   <td class="td_det_fact" style="text-align: center;">
                     <input class="buton_quitar" type="image" src="quitar.png" width="40px" height="30p">
                   </td>
@@ -154,6 +153,12 @@ if (mysqli_num_rows($result) == 1) {
           <?php
             }
           }
+
+          echo "
+
+";
+          echo "";
+
           ?>
           <tr>
             <th class="th_det_fact_total_pagar_izquierdo">Total a pagar</th>

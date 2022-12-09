@@ -1,6 +1,4 @@
-<?php
-header("location: Administrador/total.php");
-include('menu.php'); ?>
+<?php include('menu.php'); ?>
 <div class="Contenedor_principal">
 
 <?php

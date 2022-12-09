@@ -190,7 +190,7 @@ body {
     text-align: left;
     width: 1100px;
     height: auto;
-    border-radius: 10px;
+    border: 3px solid white; 
 }
 
 .titulo_servicios {
@@ -201,6 +201,7 @@ body {
     color: white;
     font-family: Bahnschrift;
     border-radius: 10px;
+    border-bottom: 3px solid white; 
 }
 
 .con {
@@ -214,13 +215,18 @@ body {
     margin-left: 45px;
     text-align: center;
 }
+.descripcion_servicios{
+  text-align: center;
+  color: white;
+  font-family: Bahnschrift;
+}
 
 .img_con {
     width: 100%;
     height: 50%;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid white;
     transition: .2s;
 }
 

@@ -38,7 +38,6 @@ include("../../conecta.php");
                 <li><a href="../usuarios/usuarios.php">Usuarios</a></li>
                 <li><a href="../CRUD_Fact/listafacturas.php">Factura</a></li>
                 <li><a href="modificar_servicio.php" >Servicio</a></li>
-                <li><a href="informes.php">Informes</a></li>
                 <li><a target="_blank" href="../manual.pdf">Ayuda</a></li>
                 <li><a href="../cerrar_sesion.php" >Cerrar Sesión</a></li>
             </ul>
@@ -63,7 +62,7 @@ include("../../conecta.php");
                     ?>
 
                     <tr>
-                    <td><?php echo $fila['id_servicio']; ?></td>`
+                    <td><?php echo $fila['id_servicio']; ?></td>
                     <td><img alt="No hay imagen" width="120" height="80" src="data:image/jpg;base64,<?php echo  base64_encode($fila['imagen']); ?>"></td>
                     <td><?php echo $fila['nom_servicio']; ?></td>
                     <td><?php echo $fila['precio']; ?></td>

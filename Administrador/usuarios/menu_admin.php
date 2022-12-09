@@ -47,7 +47,6 @@ if (!isset($_SESSION['admin'])) {
             <li><a href="usuarios.php">Usuarios</a></li>
             <li><a href="../CRUD_Fact/listafacturas.php">Factura</a></li>
             <li><a href="../CRUD_Servi/modificar_servicio.php">Servicio</a></li>
-            <li><a href="informes.php">Informes</a></li>
             <li><a target="_blank" href="../manual.pdf">Ayuda</a></li>
             <li><a href="../cerrar_sesion.php">Cerrar Sesión</a></li>
         </ul>

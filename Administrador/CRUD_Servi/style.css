@@ -43,14 +43,19 @@ footer{
 /*-------------------------------------------------------Servicios administrador-------------------------------------------------------------*/
 .cuerpo_servicios{
     background-color: rgba(0, 38, 255, 0.6);
+    /*background-color: rgb(52 88 205 / 42%);*/
     border-radius: 15px;
     margin: auto;
     margin-top: 30px;
     margin-bottom: 40px;
-    text-align: left;
     width: 1100px;
     height: auto;
-    border-radius: 10px;
+    border: solid 3px white;
+}
+.descripcion_servicios{
+  text-align: center;
+  color: white;
+  font-family: Bahnschrift;
 }
 .titulo_servicios{
     background-color: rgb(42, 99, 165);
@@ -60,11 +65,7 @@ footer{
     color: white;
     font-family: Bahnschrift;
     border-radius: 10px;
-}
-.descripcion_servicios{
-  text-align: center;
-  color: white;
-  font-family: Bahnschrift;
+    border-bottom:solid 3px white;
 }
 .label_can {
     display: block;

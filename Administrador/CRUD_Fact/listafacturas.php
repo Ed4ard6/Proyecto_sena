@@ -1,4 +1,4 @@
-<?php include('menu_admin.php');?>
+<?php include('./menu_admin.php');?>
     <!-- Inicio de Codigo de lista facturas-->
     <div class="contenedor_lista_facturas">
     <div class="titulo_lista_facturas">
@@ -6,23 +6,23 @@
     </div>
     <div class="buscador">
                 <form action="listafacturas.php" class="formulario" method="post">
-                <input type="number" name="id_fac" id="id_fac" placeholder="Buscar id factura" class="input_buscar">
+                <input type="number" name="id_cli" id="id_cli" placeholder="Buscar id cliente" class="input_buscar">
                 <label for="campo"></label>  
                 <!-- <input type="submit" class="btn_buscar"  value="Buscar"> --> 
                 <input type="submit" name="buscar" id="buscar" value="Buscar" class="btn_buscar">
                 <a href="../generar_factura.php" class="botones_facturas">(+) Añadir nueva factura</a>
                  <a href="lista_facturas_eliminadas.php" class="botones_facturas" id="boton_eliminar">Facturas eliminadas</a>
-                 <a href="listafacturas.php" class="boton_lista">Listado Facturas</a>
+                 <!-- <a href="listafacturas.php" class="boton_lista">Listado Facturas</a> -->
                 </form>
             </div>
             <?php
             //////////////////////////////////////////inicio boton buscar ////////////////////////////////////////////
             if (isset($_POST['buscar'])){
 
-                $id_factura = $_POST['id_fac'];
+                $id_cliente = $_POST['id_cli'];
                 $SQL ="SELECT factura.id_factura, factura.fecha_recibido, factura.fecha_entregado, factura.estado, usuarios.documento, usuarios.nombres, usuarios.apellidos FROM factura
                 INNER JOIN usuarios
-                ON factura.info_cliente_id = usuarios.documento WHERE factura.id_factura = '$id_factura' ORDER BY factura.id_factura ASC;";
+                ON factura.info_cliente_id = usuarios.documento WHERE usuarios.documento = '$id_cliente' ORDER BY factura.id_factura DESC;";
                 $result = mysqli_query($conn,$SQL);
 
                 if (mysqli_num_rows($result) <= 0){
@@ -42,7 +42,7 @@
     
                 </thead>
                 </table>
-                <h1 class="factura_inexistente">¡El id-factura ingresado no existe!</h1>
+                <h1 class="factura_inexistente">¡El id-usuario ingresado no tiene facturas!</h1>
                 
         
                 <?php
@@ -68,10 +68,10 @@
                 </thead>
         
                 <?php
-                $id_factura = $_POST['id_fac'];
+                $id_cliente = $_POST['id_cli'];
                 $SQL ="SELECT factura.id_factura, factura.fecha_recibido, factura.fecha_entregado, factura.estado, usuarios.documento, usuarios.nombres, usuarios.apellidos FROM factura
                 INNER JOIN usuarios
-                ON factura.info_cliente_id = usuarios.documento WHERE /* factura.estado = 'Verificado' AND */ factura.id_factura = '$id_factura' ORDER BY factura.id_factura DESC ;";
+                ON factura.info_cliente_id = usuarios.documento WHERE /* factura.estado = 'Verificado' AND */ usuarios.documento = '$id_cliente' ORDER BY factura.id_factura DESC ;";
                 $result = mysqli_query($conn,$SQL);
                 while($fila=mysqli_fetch_array($result)){
                 ?>

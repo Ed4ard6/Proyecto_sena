@@ -1,6 +1,19 @@
 <?php 
-
+session_start();
 include("../../conecta.php");
+if (!isset($_SESSION['admin'])) {
+    echo "hola";
+    # code...
+    echo ' 
+    <script>
+    alert("Por favor debes iniciar sesion");
+    window.location = "../../login1.php";
+    </script>
+    ';
+    
+    session_destroy();
+
+}
 
  ?>
  <!DOCTYPE html>
@@ -26,7 +39,6 @@ include("../../conecta.php");
                 <li><a href="../usuarios/usuarios.php">Usuarios</a></li>
                 <li><a href="../CRUD_Fact/listafacturas.php">Factura</a></li>
                 <li><a href="modificar_servicio.php" >Servicio</a></li>
-                <li><a href="informes.php">Informes</a></li>
                 <li><a target="_blank" href="../manual.pdf">Ayuda</a></li>
                 <li><a href="../cerrar_sesion.php" >Cerrar Sesión</a></li>
             </ul>
@@ -48,7 +60,7 @@ include("../../conecta.php");
                 <label for="imagen" class="label_can">Ingrese la nueva imagen del servicio: </label>
                 <div class="div_file"><input type="file" name="imagen" id="imagen" size="20" class="input_file_can"></div>
                 <label for="nombre_ser"  class="label_can">Ingrese el nuevo nombre del servicio: </label>
-                <<input class="input_can" type="text" name="nombre_ser" id="nombre_ser" required value="<?php echo $fila['nom_servicio']; ?>"><br><br>
+                <input class="input_can" type="text" name="nombre_ser" id="nombre_ser" required value="<?php echo $fila['nom_servicio']; ?>"><br><br>
                 <label for="precio_ser" class="label_can">Ingrese el nuevo precio del servicio (sin puntos ni comas): </label>
                 <input class="input_can" type="text" name="precio_ser" id="precio_ser" required value="<?php echo $fila['precio']; ?>"><br><br>
                 <label for="peso_ser" class="label_can">Ingrese la nueva tarifa de peso (opcional): </label>

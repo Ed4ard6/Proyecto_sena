@@ -41,8 +41,8 @@
             alert("Este usuario ya fue registrado, intenta de nuevo");
             window.location = "insert.php";
             </script>';
-        }
-        //almaceno las variable 
+        }else{
+//almaceno las variable 
         $insert = mysqli_query($conn, "INSERT INTO usuarios(documento, nombres, apellidos, usuario, contraseña, correo, num_celular, direccion) VALUES ('$documento','$nombre', '$apellido', '$usuario', '$contraseña', '$correo', '$celular', '$direccion')");
         //validacion 
         if ($insert) {
@@ -51,6 +51,7 @@
             alert("Usuario creado correctamente");
             window.location = "usuarios.php";
             </script>';
+        }
         }
     }
     ?>
@@ -78,7 +79,7 @@
                 <label for="">Correo</label>
             </div>
             <div class="form-group">
-                <input class="input_text" type="text" name="contraseña" placeholder="Ingresar contraseña" required>
+                <input class="input_text" type="password" name="contraseña" placeholder="Ingresar contraseña" required>
                 <input class="input_text" type="email" name="correo" placeholder="Ingresar correo" required>
             </div>
             <div class="form-group">
@@ -86,8 +87,8 @@
                 <label for="">Direccion</label>
             </div>
             <div class="form-group">
-                <input class="input_text" type="number" name="celular" placeholder="Ingresar numero de celular" required>
-                <input class="input_text" type="text" name="direccion" placeholder="Ingresar direccion" required>
+                <input class="input_text" type="number" name="celular" min="3000000000" max="3999999999" placeholder="Ingresar numero de celular" required>
+                <input class="input_text" type="text" name="direccion" minlength="10" placeholder="Ingresar direccion" required>
             </div>
             <div class="btn__group">
                 <a href="usuarios.php" class="btn btn__danger">Cancelar</a>
